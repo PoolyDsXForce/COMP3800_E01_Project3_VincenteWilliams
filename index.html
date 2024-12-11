@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Diabetes Prediction</title>
+  </head>
+  <body>
+    <h1>Diabetes Prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type='text' name = "Pregnancies" placeholder="Pregnancies" required="required" />
+      <input type='text' name = "Glucose" placeholder="Glucose" required="required" />
+      <input type='text' name = "BloodPressure" placeholder="BloodPressure" required="required" />
+      <input type='text' name = "SkinThickness" placeholder="SkinThickness" required="required" />
+      <input type='text' name = "Insulin" placeholder="Insulin" required="required" />
+      <input type='text' name = "BMI" placeholder="BMI" required="required" />
+      <input type='text' name = "DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" />
+      <input type='text' name = "Age" placeholder="Age" required="required" />
+      <button type="submit" class="btn btn-primary btn-large">Predict</button>
+    </form>
+    <h2>The prediction is: {{predicted_text}}</h2>
+  </body>
+</html>
